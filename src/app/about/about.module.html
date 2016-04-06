@@ -1,0 +1,16 @@
+<section class="about">
+    <p translate="about.test"></p>
+
+    <ul>
+        <li ng-repeat="thing in about.awesomeThings">
+            {{ thing }}
+        </li>
+    </ul>
+
+    <p><b>Api Users:</b></p>
+    <ul>
+        <li ng-repeat="user in about.users">
+            {{ user.username }}
+        </li>
+    </ul>
+</section>

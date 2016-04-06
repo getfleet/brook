@@ -1,0 +1,4 @@
+{
+    "ENV": "pre",
+    "API_BASE_URL": "http://pre.myapi.com"
+}

@@ -1,0 +1,4 @@
+{
+    "ENV": "dev",
+    "API_BASE_URL": "http://dev.myapi.com"
+}
