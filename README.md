@@ -1,8 +1,11 @@
 # brook
 
+![image](src/assets/images/brook-logo.png)
+
 [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
 
 Angular 1.x skeleton following the standards of the [AngularJS Team](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
+
 
 ## Features
 
