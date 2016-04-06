@@ -7,9 +7,10 @@ Angular 1.x skeleton following the standards of the [AngularJS Team](https://git
 ## Features
 
 + Main app scaffolding using the style guide recommendations
-+ AngularJS 1.5.x
++ AngularJS 1.5.x with UI-Router
++ Angular UI Bootstrap
 + Restangular
-+ Angular translations (Ready for choosing navigator language)
++ Angular translations (Ready for using navigator language)
 + Flash alerts included
 + Spinner included in every API requests
 + Environment configuration via json
@@ -17,8 +18,8 @@ Angular 1.x skeleton following the standards of the [AngularJS Team](https://git
 + Dynamic and automatized building for development environment
 + Minimized distribution version for production environment
 + Sass compiled by libsass
-+ HTML5 Push state enabled and mod-rewrite for dev environment
-+ Testing scaffolding ready
++ HTML5 Push state enabled and mod-rewrite included for dev environment
++ Test scaffolding ready
 
 ## Technologies
 
@@ -31,6 +32,19 @@ Angular 1.x skeleton following the standards of the [AngularJS Team](https://git
 + [Karma](https://karma-runner.github.io)
 + [Jasmine](http://jasmine.github.io/)
 
+## Installation
+
+Just clone the repo wherever you want and delete the downloaded `.git` directory to add your own repo
+
+````bash
+git clone git@github.com:getfleet/brook.git your_project
+cd your_project
+rm -Rf .git
+git init
+git add remote origin git@github.com:your_user/your_repo
+git add .
+git push origin master
+````
 
 ## Build & development
 
@@ -43,7 +57,7 @@ grunt serve
 ### Production environment
 
 ````bash
-grunt serve
+grunt build:prod
 ````
 
 
@@ -57,7 +71,4 @@ grunt test
 
   <a href="https://github.com/nass600" target="_blank">
     <img src="http://s.gravatar.com/avatar/49f04efaf80ecb68e6e383919019b843?s=80">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/1/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/1/avatar">
   </a>

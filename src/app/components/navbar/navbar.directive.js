@@ -8,7 +8,7 @@
     });
 
     navbar.controller('NavbarCtrl', function ($state) {
-        this.brand = "Your Amazing App";
+        this.brand = "Brook";
     });
 
     navbar.directive('navbar', function () {

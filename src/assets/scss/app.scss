@@ -2,8 +2,9 @@
 @import "variables";
 
 // bower:scss
-@import "../bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+@import "../bootstrap/scss/bootstrap.scss";
 
 
 @import "default";
