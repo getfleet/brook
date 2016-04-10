@@ -22,14 +22,16 @@
             });
     });
 
-    about.controller('AboutCtrl', function (UserFactory) {
-        UserFactory.getAll().then(
+    about.controller('AboutCtrl', function (RepositoryFactory) {
+        var ctrl = this;
+
+        RepositoryFactory.getAll().then(
             function (data) {
-                this.users = data.plain();
+                ctrl.repositories = data.plain();
             }
         );
 
-        this.awesomeThings = [
+        ctrl.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
             'Karma'

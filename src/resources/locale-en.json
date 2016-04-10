@@ -1,4 +1,7 @@
 {
+    "about.api.request_example": "API request example",
     "about.test": "<b>About in english</b>",
+    "navbar.home": "Home",
+    "navbar.about": "About",
     "main.test": "<b>Yeahhhhhhh</b>"
 }

@@ -2,7 +2,8 @@
 
 ![image](src/assets/images/brook-logo-wide.png)
 
-[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
+[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
 
 Angular 1.x skeleton following the standards of the [AngularJS Team](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 
@@ -13,7 +14,7 @@ Angular 1.x skeleton following the standards of the [AngularJS Team](https://git
 + AngularJS 1.5.x with UI-Router
 + Angular UI Bootstrap
 + Restangular
-+ Angular translations (Ready for using navigator language)
++ Angular translations with auto translation keys extraction (Ready for using navigator language)
 + Flash alerts included
 + Spinner included in every API requests
 + Environment configuration via json

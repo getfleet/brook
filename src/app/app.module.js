@@ -20,7 +20,7 @@
         'app.config',
         'app.main',
         'app.about',
-        'app.services.user',
+        'app.services.repository',
         'app.components.navbar'
     ]);
 

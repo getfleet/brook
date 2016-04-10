@@ -1,4 +1,7 @@
 {
+    "about.api.request_example": "Ejemplo de llamada API",
     "about.test": "<b>About en español</b>",
+    "navbar.home": "Home",
+    "navbar.about": "Acerca de",
     "main.test": "<b>Siiiiiiii</b>"
 }

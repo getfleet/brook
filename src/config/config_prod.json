@@ -1,4 +1,3 @@
 {
-    "ENV": "prod",
-    "API_BASE_URL": "https://myapi.com"
+    "ENV": "prod"
 }

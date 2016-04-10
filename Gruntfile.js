@@ -57,6 +57,10 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/**/*.{scss,sass}'],
                 tasks: ['sass:server', 'autoprefixer']
             },
+            config: {
+                files: ['<%= yeoman.app %>/config/*.json'],
+                tasks: ['ngconstant:dev']
+            },
             translate: {
                 files: ['<%= yeoman.app %>/**/*.js', '<%= yeoman.app %>/**/*.html'],
                 tasks: ['i18nextract']
@@ -71,7 +75,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= yeoman.app %>/**/*.html',
                     '<%= yeoman.temp %>/assets/css/{,*/}*.css',
-                    '<%= yeoman.app %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= yeoman.app %>/assets/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                     '<%= yeoman.app %>/resources/{,*/}*.json'
                 ]
             }
@@ -269,7 +273,7 @@ module.exports = function (grunt) {
                 src: [
                     '<%= yeoman.dist %>/assets/js/{,*/}*.js',
                     '<%= yeoman.dist %>/assets/css/{,*/}*.css',
-                    '<%= yeoman.dist %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= yeoman.dist %>/assets/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                     '<%= yeoman.dist %>/assets/fonts/*'
                 ]
             }
@@ -302,11 +306,11 @@ module.exports = function (grunt) {
             options: {
                 assetsDirs: [
                     '<%= yeoman.dist %>',
-                    '<%= yeoman.dist %>/assets/images',
+                    '<%= yeoman.dist %>/assets/img',
                     '<%= yeoman.dist %>/assets/css'
                 ],
                 patterns: {
-                    js: [[/(assets\/images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
+                    js: [[/(assets\/img\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
                 }
             }
         },
@@ -341,9 +345,9 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>/assets/images',
+                    cwd: '<%= yeoman.app %>/assets/img',
                     src: '{,*/}*.{png,jpg,jpeg,gif}',
-                    dest: '<%= yeoman.dist %>/assets/images'
+                    dest: '<%= yeoman.dist %>/assets/img'
                 }]
             }
         },
@@ -352,9 +356,9 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>/assets/images',
+                    cwd: '<%= yeoman.app %>/assets/img',
                     src: '{,*/}*.svg',
-                    dest: '<%= yeoman.dist %>/assets/images'
+                    dest: '<%= yeoman.dist %>/assets/img'
                 }]
             }
         },
@@ -421,15 +425,15 @@ module.exports = function (grunt) {
                         src: [
                             '*.{ico,png,txt}',
                             '*.html',
-                            'assets/images/{,*/}*.{webp}',
+                            'assets/img/{,*/}*.{webp}',
                             'assets/fonts/{,*/}*.*',
                             'resources/{,*/}*.*'
                         ]
                     },
                     {
                         expand: true,
-                        cwd: '<%= yeoman.temp %>/assets/images',
-                        dest: '<%= yeoman.dist %>/assets/images',
+                        cwd: '<%= yeoman.temp %>/assets/img',
+                        dest: '<%= yeoman.dist %>/assets/img',
                         src: ['generated/*']
                     },
                     {
@@ -475,7 +479,8 @@ module.exports = function (grunt) {
         ngconstant: {
             options: {
                 name: 'app.config',
-                dest: 'src/app/app.config.js'
+                dest: '<%= yeoman.app %>/app/app.config.js',
+                constants: {CONFIG: grunt.file.readJSON('src/config/config.json')}
             },
             dev: {constants: {CONFIG: grunt.file.readJSON('src/config/config_dev.json')}},
             pre: {constants: {CONFIG: grunt.file.readJSON('src/config/config_pre.json')}},
