@@ -17,7 +17,8 @@ module.exports = function (grunt) {
         useminPrepare: 'grunt-usemin',
         ngtemplates: 'grunt-angular-templates',
         ngconstant: 'grunt-ng-constant',
-        cdnify: 'grunt-google-cdn'
+        cdnify: 'grunt-google-cdn',
+        i18nextract: 'grunt-angular-translate'
     });
 
     var modRewrite = require('connect-modrewrite');
@@ -55,6 +56,10 @@ module.exports = function (grunt) {
             sass: {
                 files: ['<%= yeoman.app %>/**/*.{scss,sass}'],
                 tasks: ['sass:server', 'autoprefixer']
+            },
+            translate: {
+                files: ['<%= yeoman.app %>/**/*.js', '<%= yeoman.app %>/**/*.html'],
+                tasks: ['i18nextract']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -477,6 +482,17 @@ module.exports = function (grunt) {
             prod: {constants: {CONFIG: grunt.file.readJSON('src/config/config_prod.json')}}
         },
 
+        // Translation strings extraction
+        i18nextract: {
+            default_options: {
+                src: ['<%= yeoman.app %>/**/*.js', '<%= yeoman.app %>/**/*.html'],
+                lang: ['en', 'es'],
+                suffix:  '.json',
+                prefix: 'locale-',
+                dest: '<%= yeoman.app %>/resources'
+            }
+        },
+
         // Test settings
         karma: {
             unit: {
@@ -494,6 +510,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'ngconstant:dev',
+            'i18nextract',
             'clean:server',
             'wiredep',
             'concurrent:server',
@@ -513,6 +530,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'i18nextract',
         'clean:dist',
         'wiredep',
         'useminPrepare',
