@@ -64,7 +64,7 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= yeoman.app %>/{,*/}*.html',
+                    '<%= yeoman.app %>/**/*.html',
                     '<%= yeoman.temp %>/assets/css/{,*/}*.css',
                     '<%= yeoman.app %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                     '<%= yeoman.app %>/resources/{,*/}*.json'
@@ -430,7 +430,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '.',
-                        src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+                        src: 'bower_components/font-awesome/fonts/*',
                         dest: '<%= yeoman.dist %>'
                     },
                     {

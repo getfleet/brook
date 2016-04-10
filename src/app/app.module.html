@@ -2,20 +2,14 @@
     <navbar></navbar>
 </div>
 
-<div class="container">
+<div>
     <flash-message duration="5000"></flash-message>
     <span us-spinner="{radius:30, width:5, length: 16, scale:0.5}" spinner-on="showSpinner"></span>
-    <div class="clearfix">
-        <div class="pull-right">
-            <span class="glyphicon glyphicon-time"></span>
-            {{app.currentTime | date:'medium'}}
-        </div>
-    </div>
     <div ui-view></div>
 </div>
 
 <div class="footer">
     <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><i class="fa fa-heart-o"></i> from the Fleet team</p>
     </div>
 </div>
