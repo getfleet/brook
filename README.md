@@ -1,6 +1,6 @@
 # brook
 
-![image](src/assets/images/brook-logo-wide.png)
+![image](src/assets/img/brook-logo-wide.png)
 
 [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
