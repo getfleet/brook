@@ -6,23 +6,22 @@
  * Controller of the app
  */
 (function () {
-    'use strict';
+  'use strict';
 
-    var main = angular.module('app.main', [
-        'ui.router'
-    ]);
+  var main = angular.module('app.main', [
+    'ui.router'
+  ]);
 
-    main.config(function ($stateProvider) {
-        $stateProvider
-            .state('app.main', {
-                url: 'main',
-                templateUrl: 'app/main/main.module.html',
-                controller: 'MainCtrl',
-                controllerAs: 'main'
-            });
-    });
+  main.config(['$stateProvider', function ($stateProvider) {
+    $stateProvider
+      .state('app.main', {
+        url: 'main',
+        templateUrl: 'app/main/main.module.html',
+        controller: 'MainCtrl',
+        controllerAs: 'mainCtrl'
+      });
+  }]);
 
-    main.controller('MainCtrl', function () {
-    });
+  main.controller('MainCtrl', function () {});
 
 }());

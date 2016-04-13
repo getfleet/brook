@@ -7,9 +7,9 @@
 
     });
 
-    navbar.controller('NavbarCtrl', function ($state) {
+    navbar.controller('NavbarCtrl', ['$state', function ($state) {
         this.brand = "Brook";
-    });
+    }]);
 
     navbar.directive('navbar', function () {
         return {

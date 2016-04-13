@@ -18,6 +18,7 @@ Angular 1.x skeleton following the standards of the [AngularJS Team](https://git
 + Flash alerts included
 + Spinner included in every API requests
 + Environment configuration via json
++ Gruntfile separated by task file
 + Grunt tasks ready for production, pre-production and dev environments
 + Dynamic and automatized building for development environment
 + Minimized distribution version for production environment
@@ -75,4 +76,8 @@ grunt test
 
   <a href="https://github.com/nass600" target="_blank">
     <img src="http://s.gravatar.com/avatar/49f04efaf80ecb68e6e383919019b843?s=80">
+  </a>
+
+  <a href="https://github.com/rrequero" target="_blank">
+    <img src="https://secure.gravatar.com/avatar/88658283520e4fa50fd767c8b52bf4f8?s=80">
   </a>

@@ -1,7 +1,10 @@
 {
-    "about.api.request_example": "Ejemplo de llamada API",
+    "about.api.request_example": "",
     "about.test": "<b>About en español</b>",
     "navbar.home": "Home",
     "navbar.about": "Acerca de",
-    "main.test": "<b>Siiiiiiii</b>"
+    "navbar.repository": "Repositorios (Ejemplo)",
+    "main.test": "<b>Siiiiiiii</b>",
+    "repository.detail.title": "Detalle",
+    "repository.api.request_example": "Ejemplo de llamada API"
 }

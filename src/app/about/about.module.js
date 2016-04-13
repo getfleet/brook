@@ -22,20 +22,13 @@
             });
     });
 
-    about.controller('AboutCtrl', function (RepositoryFactory) {
-        var ctrl = this;
-
-        RepositoryFactory.getAll().then(
-            function (data) {
-                ctrl.repositories = data.plain();
-            }
-        );
-
-        ctrl.awesomeThings = [
+    about.controller('AboutCtrl', [function () {
+      
+        this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
             'Karma'
         ];
-    });
+    }]);
 
 }());

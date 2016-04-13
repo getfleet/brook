@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <section class="repository">
+        <p>{{ 'repository.detail.title'|translate }}: </p>
+        <h3>Name: {{detailRepCtrl.repository.name}}</h3>
+        <h4>
+          Owner: {{detailRepCtrl.repository.owner.login}}
+        </h4>
+        <img ng-src="{{detailRepCtrl.repository.owner.avatar_url}}"/>
+      </section>
+    </div>
+  </div>
+</div>
